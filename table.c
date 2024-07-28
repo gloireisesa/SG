@@ -8,16 +8,28 @@ int table_count = 0;
 
 // Fonction pour libérer la mémoire allouée pour une table
 void free_table(Table *table) {
-    // ... (code identique à votre version)
+    if (table == NULL) return;
+    free(table->name);
+    for (int i = 0; i < table->columns; i++) {
+        free(table->column_defs[i].name);
+    }
+    for (int i = 0; i < table->rows; i++) {
+        for (int j = 0; j < table->columns; j++) {
+            free(table->data[i][j]);
+        }
+    }
 }
 
 // Fonction pour libérer la mémoire de toutes les tables
 void free_all_tables(void) {
-    // ... (code identique à votre version)
+    for (int i = 0; i < table_count; i++) {
+        free_table(&tables[i]);
+    }
 }
 
+
 // Fonction pour créer une nouvelle table
-void creer_table(char *name, int columns, char *column_defs[]) {
+/*void creer_table(char *name, int columns, char *column_defs[]) {
     // ... (code identique à votre version)
 }
 
@@ -49,4 +61,4 @@ void sauvegarder_donnees(const char *filename) {
 // Fonction pour charger les données des tables depuis un fichier
 void charger_donnees(const char *filename) {
     // ... (code identique à votre version)
-}
+}*/

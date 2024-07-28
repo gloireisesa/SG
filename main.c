@@ -3,9 +3,9 @@
 #include "table.h"
 
 // Fonction pour gérer les commandes utilisateur
-void gerer_commande(char *input) {
+/*void gerer_commande(char *input) {
     // ... (code identique à votre version)
-}
+}*/
 
 int main()
 {

@@ -30,5 +30,8 @@ void supprimer_de_table(char *name, char *condition);
 void selectionner_de_table(char *name, char *condition);
 void sauvegarder_donnees(const char *filename);
 void charger_donnees(const char *filename);
+void free_all_tables(void);
+void free_table(Table *table);
+
 
 #endif // TABLE_H_INCLUDED
