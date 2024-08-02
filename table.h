@@ -22,6 +22,10 @@ typedef struct {
     int primary_key_index;
 } Table;
 
+Table tables[MAX_TABLES];
+int table_count = 0;
+
+
 // Déclarations des fonctions
 void creer_table(char *name, int columns, char *column_defs[]);
 void inserer_dans_table(char *name, char *values[]);
