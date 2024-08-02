@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#include "table.h"
 // Fonction pour mettre � jour des lignes dans une table selon une condition
 void mettre_a_jour_table(char *name, char *condition, char *new_values[]) {
     Table *table = NULL;
