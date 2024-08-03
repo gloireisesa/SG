@@ -24,9 +24,6 @@ typedef struct {
 Table tables[MAX_TABLES];
 int table_count = 0;
 
-Table tables[MAX_TABLES];
-int table_count = 0;
-
 
 // Déclarations des fonctions
 void creer_table(char *name, int columns, char *column_defs[]);
