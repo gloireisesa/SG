@@ -1,6 +1,8 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<string.h>
 #include "table.h"
+#include "table.c"
 
 // Fonction pour gérer les commandes utilisateur
 /*void gerer_commande(char *input) {
@@ -9,6 +11,7 @@
 
 int main()
 {
+
     atexit(free_all_tables);
 
     char input[MAX_INPUT_SIZE];
@@ -18,7 +21,8 @@ int main()
             break;
         }
         input[strcspn(input, "\n")] = '\0';
-        gerer_commande(input);
+        int gerer_commande(char *input);
+        //free_all_tables;
     }
     return 0;
 }
