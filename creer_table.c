@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include "table.h"
 // Fonction pour cr�er une nouvelle table
 void creer_table(char *name, int columns, char *column_defs[]) {
