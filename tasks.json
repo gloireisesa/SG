@@ -5,6 +5,7 @@
             "label": "C/C++: gcc.exe générer le fichier actif",
             "command": "C:\\Program Files (x86)\\CodeBlocks\\MinGW\\bin\\gcc.exe",
             "args": [
+                "-std=c99",
                 "-fdiagnostics-color=always",
                 "-g",
                 "${file}",
