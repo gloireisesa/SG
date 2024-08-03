@@ -1,6 +1,6 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include "table.h"
 //#include "table.c"
 
@@ -18,7 +18,8 @@ void gerer_commande(char *input) {
         char *token = strtok(column_defs_str, ",");
         int count = 0;
         while (token && count < columns) {
-            column_defs[count++] = strdup(token);
+            column_defs[count++] = (char *) strdup(token);
+            //column_defs[count++] = strdup(token);
             token = strtok(NULL, ",");
         }
         creer_table(table_name, columns, column_defs);

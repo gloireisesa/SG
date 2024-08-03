@@ -73,4 +73,4 @@ void gerer_commande(char *input) {
     } else {
         printf("Erreur : Commande inconnue '%s'.\n", command);
     }
-}/*
+}*/
