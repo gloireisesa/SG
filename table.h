@@ -5,7 +5,7 @@
 #define MAX_TABLES 10
 #define MAX_ROWS 100
 #define MAX_COLUMNS 10
-#include "table.c"
+//#include "table.c"
 
 typedef enum { ENTIER, CHAINE, DECIMAL, BINAIRE, DATE } DataType;
 
@@ -22,11 +22,9 @@ typedef struct {
     char *data[MAX_ROWS][MAX_COLUMNS];
     int primary_key_index;
 } Table;
-Table tables[MAX_TABLES];
+extern Table tables[MAX_TABLES];
+//Table tables[MAX_TABLES];
 extern int table_count;
-
-
-
 
 
 // Déclarations des fonctions
