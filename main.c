@@ -21,7 +21,8 @@ int main()
             break;
         }
         input[strcspn(input, "\n")] = '\0';
-        int gerer_commande(char *input);
+        //int gerer_commande(char *input);
+        gerer_commande(input);
         //free_all_tables;
     }
     return 0;
