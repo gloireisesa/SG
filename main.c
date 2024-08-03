@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<string.h>
 #include "table.h"
-#include "table.c"
+//#include "table.c"
 
 // Fonction pour gérer les commandes utilisateur
 /*void gerer_commande(char *input) {

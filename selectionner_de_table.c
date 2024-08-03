@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include "table.h"
 
 // Fonction pour sélectionner et afficher des données d'une table

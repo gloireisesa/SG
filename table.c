@@ -4,7 +4,7 @@
 #include "table.h"
 
 Table tables[MAX_TABLES];
-//int table_count = 0;
+int table_count = 0;
 
 // Fonction pour libérer la mémoire allouée pour une table
 void free_table(Table *table) {
