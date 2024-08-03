@@ -21,6 +21,8 @@ typedef struct {
     char *data[MAX_ROWS][MAX_COLUMNS];
     int primary_key_index;
 } Table;
+Table tables[MAX_TABLES];
+int table_count = 0;
 
 Table tables[MAX_TABLES];
 int table_count = 0;
