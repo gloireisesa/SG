@@ -23,7 +23,7 @@ typedef struct {
     int primary_key_index;
 } Table;
 Table tables[MAX_TABLES];
-extern int table_count = 0;
+extern int table_count;
 
 
 
