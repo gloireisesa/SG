@@ -37,6 +37,7 @@ void sauvegarder_donnees(const char *filename);
 void charger_donnees(const char *filename);
 void free_all_tables(void);
 void free_table(Table *table);
+void gerer_commande(char *input);
 
 
 #endif // TABLE_H_INCLUDED
