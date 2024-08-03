@@ -1,4 +1,4 @@
-#include <stdio.h>
+/*#include <stdio.h>
 #include <string.h>
 #include "table.h"
 
@@ -73,4 +73,4 @@ void gerer_commande(char *input) {
     } else {
         printf("Erreur : Commande inconnue '%s'.\n", command);
     }
-}
+}/*
