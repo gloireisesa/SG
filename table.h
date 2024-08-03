@@ -5,6 +5,7 @@
 #define MAX_TABLES 10
 #define MAX_ROWS 100
 #define MAX_COLUMNS 10
+#include "table.c"
 
 typedef enum { ENTIER, CHAINE, DECIMAL, BINAIRE, DATE } DataType;
 

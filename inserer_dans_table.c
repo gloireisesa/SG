@@ -3,8 +3,8 @@
 #include <string.h>
 #include "table.h"
 
-Table tables[MAX_TABLES];
-int table_count = 0;
+//Table tables[MAX_TABLES];
+//int table_count = 0;
 
 // fonction pour inserer une nouvelle ligne dans une table
 void inserer_dans_table(char *name, char *values[]) {
