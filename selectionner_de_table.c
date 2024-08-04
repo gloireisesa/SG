@@ -14,7 +14,7 @@ void selectionner_de_table(char *name, char *condition) {
     }
 
     if (table == NULL) {
-        printf("Erreur : Table '%s' non trouvée.\n", name);
+        printf("Erreur : Table '%s' non trouvee.\n", name);
         return;
     }
 
@@ -45,7 +45,7 @@ void selectionner_de_table(char *name, char *condition) {
         }
 
         if (col_index == -1) {
-            printf("Erreur : Colonne '%s' non trouvée.\n", col_name);
+            printf("Erreur : Colonne '%s' non trouvee.\n", col_name);
             return;
         }
     }
