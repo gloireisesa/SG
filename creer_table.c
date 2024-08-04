@@ -45,5 +45,5 @@ void creer_table(char *name, int columns, char *column_defs[]) {
     }
 
     table_count++;
-    printf("Table '%s' cr��e avec %d colonnes.\n", name, columns);
+    printf("Table '%s' creee avec %d colonnes.\n", name, columns);
 }
