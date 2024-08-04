@@ -6,7 +6,7 @@
 void sauvegarder_donnees(const char *filename) {
     FILE *file = fopen(filename, "w");
     if (file == NULL) {
-        printf("Erreur : Impossible d'ouvrir le fichier en écriture.\n");
+        printf("Erreur : Impossible d'ouvrir le fichier en ecriture.\n");
         return;
     }
 
@@ -39,5 +39,5 @@ void sauvegarder_donnees(const char *filename) {
     }
 
     fclose(file);
-    printf("Données sauvegardées dans '%s'.\n", filename);
+    printf("Donnees sauvegardees dans '%s'.\n", filename);
 }
