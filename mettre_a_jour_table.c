@@ -16,7 +16,7 @@ void mettre_a_jour_table(char *name, char *condition, char *new_values[]) {
     }
 
     if (table == NULL) {
-        printf("Erreur : Table '%s' non trouv�e.\n", name);
+        printf("Erreur : Table '%s' non trouvee.\n", name);
         return;
     }
 
@@ -33,7 +33,7 @@ void mettre_a_jour_table(char *name, char *condition, char *new_values[]) {
     }
 
     if (col_index == -1) {
-        printf("Erreur : Colonne '%s' non trouv�e.\n", col_name);
+        printf("Erreur : Colonne '%s' non trouvee.\n", col_name);
         return;
     }
 
@@ -46,5 +46,5 @@ void mettre_a_jour_table(char *name, char *condition, char *new_values[]) {
             }
         }
     }
-    printf("Table '%s' mise � jour.\n", name);
+    printf("Table '%s' mise a jour.\n", name);
 }
