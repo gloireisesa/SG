@@ -14,7 +14,7 @@ void supprimer_de_table(char *name, char *condition) {
     }
 
     if (table == NULL) {
-        printf("Erreur : Table '%s' non trouv�e.\n", name);
+        printf("Erreur : Table '%s' non trouvee.\n", name);
         return;
     }
 
@@ -31,7 +31,7 @@ void supprimer_de_table(char *name, char *condition) {
     }
 
     if (col_index == -1) {
-        printf("Erreur : Colonne '%s' non trouv�e.\n", col_name);
+        printf("Erreur : Colonne '%s' non trouvee.\n", col_name);
         return;
     }
 
@@ -52,5 +52,5 @@ void supprimer_de_table(char *name, char *condition) {
         }
     }
     table->rows = new_row_count;
-    printf("Lignes supprim�es de la table '%s'.\n", name);
+    printf("Lignes supprimees de la table '%s'.\n", name);
 }
