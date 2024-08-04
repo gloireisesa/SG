@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include "table.h"
 
-// Fonction pour charger les donn�es des tables depuis un fichier
+// Fonction pour charger les données des tables depuis un fichier
 void charger_donnees(const char *filename) {
     FILE *file = fopen(filename, "r");
     if (file == NULL) {
@@ -23,12 +23,23 @@ void charger_donnees(const char *filename) {
         // Lire les informations de chaque colonne
         for (int j = 0; j < table->columns; j++) {
             char col_name[MAX_INPUT_SIZE];
-            int col_type;
+            char col_type_str[MAX_INPUT_SIZE]; // Lire le type comme une chaîne
             char primary[MAX_INPUT_SIZE];
-            fscanf(file, "%[^:]:%d %s\n", col_name, &col_type, primary);
+            fscanf(file, "%[^:]:%s %s\n", col_name, col_type_str, primary);
+
+            // Convertir la chaîne de type en entier
+            int col_type;
+            if (strcmp(col_type_str, "ENTIER") == 0) {
+                col_type = ENTIER; // Assurez-vous que ENTIER est défini dans table.h
+            } else if (strcmp(col_type_str, "CHAINE") == 0) {
+                col_type = CHAINE; // Assurez-vous que CHAINE est défini dans table.h
+            } else {
+                // Gérer les autres types...
+                col_type = -1; // Valeur par défaut en cas d'erreur
+            }
 
             table->column_defs[j].name = strdup(col_name);
-            table->column_defs[j].type = col_type;
+            table->column_defs[j].type = col_type; // Assigner le type entier
 
             if (strcmp(primary, "PRIMARY") == 0) {
                 table->primary_key_index = j;
@@ -38,12 +49,7 @@ void charger_donnees(const char *filename) {
         // Lire le nombre de lignes
         fscanf(file, "%d\n", &table->rows);
 
-        // Lire les donn�es de chaque ligne
-        //for (int r = 0; r < table->rows; r++) {
-            //for (int c = 0; c < table->columns; c++) {
-                //table->data[r][c] = malloc(
-
-        // Lire les donn�es de chaque ligne
+        // Lire les données de chaque ligne
         for (int r = 0; r < table->rows; r++) {
             for (int c = 0; c < table->columns; c++) {
                 table->data[r][c] = malloc(MAX_INPUT_SIZE);
@@ -53,5 +59,5 @@ void charger_donnees(const char *filename) {
     }
 
     fclose(file);
-    printf("Donn�es charg�es depuis '%s'.\n", filename);
+    printf("Données chargées depuis '%s'.\n", filename);
 }
