@@ -1,8 +1,12 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "table.h"
+
+//char *strdup(const char *s);
 // Fonction pour mettre � jour des lignes dans une table selon une condition
 void mettre_a_jour_table(char *name, char *condition, char *new_values[]) {
+    char *strdup(const char *s);
     Table *table = NULL;
     for (int i = 0; i < table_count; i++) {
         if (strcmp(tables[i].name, name) == 0) {

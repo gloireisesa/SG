@@ -4,6 +4,7 @@
 #include "table.h"
 // Fonction pour cr�er une nouvelle table
 void creer_table(char *name, int columns, char *column_defs[]) {
+     
     if (table_count >= MAX_TABLES) {
         printf("Erreur : Nombre maximum de tables atteint.\n");
         return;
