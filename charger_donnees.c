@@ -59,5 +59,5 @@ void charger_donnees(const char *filename) {
     }
 
     fclose(file);
-    printf("Données chargées depuis '%s'.\n", filename);
+    printf("Donnees chargees depuis '%s'.\n", filename);
 }
